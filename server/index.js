@@ -23,7 +23,13 @@ const connectDB = async () => {
 connectDB()
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors(
+    {
+      origin: "https://sheltered-thicket-38364.herokuapp.com/api"
+    }
+  )
+)
 app.use("/api/auth", authRouter)
 app.use("/api/posts", postRouter)
 
