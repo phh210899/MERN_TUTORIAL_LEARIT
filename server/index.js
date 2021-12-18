@@ -26,7 +26,7 @@ app.use(express.json())
 app.use(
   cors(
     {
-      origin: "https://sheltered-thicket-38364.herokuapp.com/api"
+      origin: "http://localhost:127.0.0.1:3000"
     }
   )
 )
