@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type : application/json
+
+{
+    "username": "phh", 
+    "password": "hh"   
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type : application/json
+
+{
+    "username": "phh", 
+    "password": "hh"
+}
+###
+Post http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTcyOWM1YzBiNmI2MDk4MmE3ZTA4YTMiLCJpYXQiOjE2MzkxMDY0NTl9.5RiVB3eTzkoKkxjuja5KftBtNx2nEPTW8Y2P0l1y8Zc
+
+{
+    "title": "youtube",
+    "description": "das",
+    "url": "https://www.youtube.com/watch?v=rgFd17fyM4A",
+    "status": "LEARNING"
+}
+
+
+###
+GET http://localhost:5000/api/posts
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTcyOWM1YzBiNmI2MDk4MmE3ZTA4YTMiLCJpYXQiOjE2Mzg1OTY3MDN9.vak_57xvAPfp6iIXVsWlNzC1rPz_EdNENBNJUMgibp8
+
+
+### 
+PUT http://localhost:5000/api/posts/6176249c8cb876701c1aaac8
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTcyOWM1YzBiNmI2MDk4MmE3ZTA4YTMiLCJpYXQiOjE2Mzg1OTY3MDN9.vak_57xvAPfp6iIXVsWlNzC1rPz_EdNENBNJUMgibp8
+
+{
+    "title": "mern/posts",
+    "description": "mern/posts",
+    "url": "",
+    "status": "LEARNING"
+}
+
+### 
+DELETE http://localhost:5000/api/posts/6179fe8f809b88e76c03498e
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTcyOWM1YzBiNmI2MDk4MmE3ZTA4YTMiLCJpYXQiOjE2MzUyOTkyMjd9.u5E2R4C4cpu7IVUaeWwUqj0ZG3xlFAQMIvO0H7WbEc8
